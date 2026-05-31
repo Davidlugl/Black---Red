@@ -1,0 +1,6 @@
+{
+  "name": "B&R Logistic Group",
+  "description": "Premium security, high-impact elite logistics, and event coordination platform for Black and Red Logistic Group.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
