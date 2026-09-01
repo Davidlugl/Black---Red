@@ -91,7 +91,7 @@ export default function ServicesCalculator({ onPreFillRequest }: ServicesCalcula
                   </div>
                 </div>
 
-                {/* Bullets List and Quote Trigger */}
+                {/* Bullets List */}
                 <div className="mt-8 pt-6 border-t border-brand-outline-variant/35 space-y-4">
                   <ul className="space-y-2.5">
                     {service.features.slice(0, 2).map((feature, idx) => (
@@ -101,20 +101,6 @@ export default function ServicesCalculator({ onPreFillRequest }: ServicesCalcula
                       </li>
                     ))}
                   </ul>
-
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setSelectedService(service);
-                    }}
-                    className={`w-full py-3.5 px-4 font-sans text-xs uppercase font-extrabold tracking-widest text-center transition-all ${
-                      isFeatured
-                        ? 'bg-white text-brand-red hover:bg-brand-red hover:text-white'
-                        : 'bg-brand-low hover:bg-brand-red hover:text-white text-brand-primary'
-                    }`}
-                  >
-                    Solicitar Dossier
-                  </button>
                 </div>
               </div>
             );
