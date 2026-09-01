@@ -87,39 +87,7 @@ export default function Hero({ onExploreServices, onTalkToExpert }: HeroProps) {
             </motion.div>
           </div>
 
-          {/* Right Status Badge Component - Interactive metrics dashboard widget */}
-          <div className="lg:col-span-4 flex flex-col justify-end lg:items-end">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="w-full max-w-xs bg-brand-container/85 border-r-4 border-brand-red p-6 space-y-4 shadow-2xl backdrop-blur-sm self-start lg:self-end"
-            >
-              <div className="flex items-center justify-between border-b border-brand-outline-variant/30 pb-3">
-                <span className="font-mono text-[10px] uppercase text-brand-primary tracking-widest flex items-center gap-1.5">
-                  <Siren className="h-3 w-3 text-brand-red animate-pulse" />
-                  {TEXTS.hero.statusBadge.title}
-                </span>
-                <span className="px-2 py-0.5 bg-brand-red/15 text-brand-primary text-[9px] font-mono font-bold tracking-wider rounded">
-                  {TEXTS.hero.statusBadge.status}
-                </span>
-              </div>
 
-              <div>
-                <p className="font-display font-black text-sm uppercase text-white tracking-wide">
-                  {TEXTS.hero.statusBadge.eventName}
-                </p>
-                <p className="text-xs text-brand-variant mt-1.5 leading-relaxed font-light">
-                  {TEXTS.hero.statusBadge.eventDesc}
-                </p>
-              </div>
-
-              <div className="pt-2 flex items-center gap-2 text-brand-primary font-mono text-[10px] tracking-wide">
-                <ShieldCheck className="h-3.5 w-3.5 text-green-500" />
-                <span>{TEXTS.hero.statusBadge.efficiency}</span>
-              </div>
-            </motion.div>
-          </div>
         </div>
       </div>
     </section>
