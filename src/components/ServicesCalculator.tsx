@@ -4,16 +4,11 @@ import {
   LayoutGrid, 
   ShieldAlert, 
   FileCheck, 
-  ArrowRight, 
-  Users, 
-  Shield, 
   Sparkles,
-  Award,
-  BookOpen,
-  Info,
-  Sliders,
   CheckCircle2,
-  X
+  X,
+  Activity,
+  Car
 } from 'lucide-react';
 import { SERVICES_DATA } from '../data';
 import { Service } from '../types';
@@ -33,6 +28,8 @@ export default function ServicesCalculator({ onPreFillRequest }: ServicesCalcula
       case 'LayoutGrid': return <LayoutGrid className={classes} />;
       case 'ShieldAlert': return <ShieldAlert className={classes} />;
       case 'FileCheck': return <FileCheck className={classes} />;
+      case 'Activity': return <Activity className={classes} />;
+      case 'Car': return <Car className={classes} />;
       default: return <ShieldAlert className={classes} />;
     }
   };

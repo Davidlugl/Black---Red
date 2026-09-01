@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowRight, MessageSquare, ShieldCheck, Siren } from 'lucide-react';
+import { ArrowRight, MessageSquare } from 'lucide-react';
 import { HERO_BG_IMAGE } from '../data';
 import { TEXTS } from '../constants';
 
