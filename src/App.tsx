@@ -7,7 +7,7 @@ import About from './components/About';
 import ServicesCalculator from './components/ServicesCalculator';
 import PortfolioGallery from './components/PortfolioGallery';
 import ContactForm from './components/ContactForm';
-import ClientPortal from './components/ClientPortal';
+import LocationsMap from './components/LocationsMap';
 import Footer from './components/Footer';
 import { ContactLead } from './types';
 import { MOCK_LEADS } from './data';
@@ -170,7 +170,7 @@ export default function App() {
       {/* Main sticky navigation */}
       <Navbar 
         onQuoteTrigger={() => scrollTo('services')} 
-        onRequestPortalTrigger={() => scrollTo('client-portal')} 
+        onRequestPortalTrigger={() => scrollTo('locations')} 
       />
 
       {/* Main sections */}
@@ -191,20 +191,15 @@ export default function App() {
         {/* Active Cases Portfolio filterable Gallery */}
         <PortfolioGallery />
 
+        {/* Locations and Gastro bars Map */}
+        <LocationsMap />
+
         {/* High Precision Quote submission form with pre-fills */}
         <ContactForm 
           preFilledDetails={preFilledDetails} 
           preFilledSpecialty={preFilledSpecialty} 
           onAddLead={handleAddLead} 
           clearPreFill={clearPreFill} 
-        />
-
-        {/* Client Interactive Portal Dashboard */}
-        <ClientPortal 
-          leads={leads} 
-          onDeleteLead={handleDeleteLead} 
-          onUpdateLeadStatus={handleUpdateLeadStatus} 
-          onLoadPredefinedLead={handleLoadPredefinedLead} 
         />
 
       </main>

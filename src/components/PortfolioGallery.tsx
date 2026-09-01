@@ -24,11 +24,11 @@ export default function PortfolioGallery() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Categories extraction
-  const categories = ['Todos', 'Corporativo', 'Logística', 'Entretenimiento', 'Monitoreo / VIP'];
+  const categories = ['Todos', 'Seguridad', 'Primeros Auxilios', 'Valet Parking'];
 
   // Filtering Logic
   const filteredProjects = PORTFOLIO_DATA.filter((proj) => {
-    const matchesFilter = activeFilter === 'Todos' || proj.type === activeFilter || (activeFilter === 'Monitoreo / VIP' && proj.type.includes('Monitoreo'));
+    const matchesFilter = activeFilter === 'Todos' || proj.type === activeFilter;
     const matchesSearch = proj.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
                           proj.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           proj.location.toLowerCase().includes(searchQuery.toLowerCase());

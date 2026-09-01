@@ -8,57 +8,56 @@ export const ABOUT_COMMAND_IMAGE = 'https://lh3.googleusercontent.com/aida-publi
 
 export const SERVICES_DATA: Service[] = [
   {
-    id: 'btl-logistica',
-    title: 'Logística BTL & Montaje',
-    tag: 'Infraestructura',
-    description: 'Arquitectura técnica para activaciones de marca. Gestionamos desde la permisología hasta el montaje estructural más complejo.',
-    longDescription: 'Ofrecemos soluciones avanzadas de ingeniería, diseño estructural y montaje técnico para activaciones de marca, eventos masivos y lanzamientos corporativos. Garantizamos el cumplimiento estricto de normativas de sismo-resistencia y seguridad de escenarios.',
-    iconName: 'LayoutGrid',
-    features: ['Planimetría Digital CAD', 'Montaje Estructural de Tarimas', 'Ingeniería Acústica & Lumínica', 'Permisos Gubernamentales Express'],
-    metrics: [
-      { label: 'Estructuras Montadas', value: '450+' },
-      { label: 'Tiempo Promedio de Carga', value: '6h' }
-    ],
-    capabilities: [
-      'Estudios de carga estructural firmados por ingenieros autorizados.',
-      'Sistemas de rigging y andamiaje certificados según el estándar europeo EN 13814.',
-      'Gestión integral de permisos ante alcaldías locales y cuerpos de bomberos.'
-    ]
-  },
-  {
     id: 'seguridad-elite',
-    title: 'Seguridad de Élite',
-    tag: 'Servicio Core',
+    title: 'Seguridad',
+    tag: 'Protección',
     description: 'Protección ejecutiva y control de masas con personal bilingüe, entrenado en protocolo internacional y gestión de crisis.',
     longDescription: 'Nuestra división insignia reúne a profesionales certificados de la seguridad táctica. Ofrecemos protección cercana para personalidades VIP, esquemas de transporte blindado hiper-seguros y gestión táctica de perímetros de alta criticidad.',
     iconName: 'ShieldAlert',
-    features: ['Escoltas Certificados y Bilingües', 'Control Tecnológico Biométrico', 'Custodia Blindada Satelital', 'Análisis Táctico Preventivo'],
+    features: ['Escoltas Certificados', 'Control de Masas', 'Análisis Táctico Preventivo', 'Gestión de Perímetros'],
     metrics: [
-      { label: 'Custodias VIP Exitosas', value: '1.2k+' },
-      { label: 'Tiempo de Reacción Crítica', value: '<45s' }
+      { label: 'Operativos Exitosos', value: '1.2k+' },
+      { label: 'Tiempo de Reacción', value: '<45s' }
     ],
     capabilities: [
-      'Agentes tácticos formados en evasión armada e inteligencia preventiva corporativa.',
-      'Vehículos blindados de última generación vinculados a la central de mando 24/7.',
-      'Sistemas antiinterferencia de radiofrecuencias para eventos VIP de alta visibilidad.'
+      'Agentes tácticos formados en evasión armada e inteligencia preventiva.',
+      'Sistemas antiinterferencia y monitoreo 24/7 de alta visibilidad.'
     ]
   },
   {
-    id: 'planes-pmu',
-    title: 'Planes PMU',
-    tag: 'Legalización & Riesgos',
-    description: 'Legalización total de eventos masivos. Diseñamos planes de contingencia avalados por entidades gubernamentales.',
-    longDescription: 'Desarrollamos e implementamos Planes de Gestión del Riesgo y Emergencias para Puestos de Mando Unificado (PMU). Somos responsables de la articulación con entes públicos, defensa civil, policía y secretarías de salud.',
-    iconName: 'FileCheck',
-    features: ['Asesoría Legal de Eventos', 'Gestión de Riesgos Integrados', 'Pistas de Evacuación Segura', 'Amnistía Regulatoria PMU'],
+    id: 'primeros-auxilios',
+    title: 'Primeros Auxilios',
+    tag: 'Atención Prehospitalaria',
+    description: 'Atención médica inmediata y despliegue de brigadas de salud para eventos de alta concurrencia y establecimientos nocturnos.',
+    longDescription: 'Contamos con paramédicos certificados y módulos de atención médica de urgencia. Diseñamos e implementamos corredores de vida y estabilización in-situ para garantizar la integridad de los asistentes.',
+    iconName: 'Activity',
+    features: ['Paramédicos Certificados', 'Módulos de Estabilización', 'Corredores de Evacuación', 'Desfibriladores In-situ'],
     metrics: [
-      { label: 'Aprobaciones de PMU', value: '100%' },
-      { label: 'Simulacros Ejecutados', value: '380+' }
+      { label: 'Vidas Salvaguardadas', value: '100%' },
+      { label: 'Tiempo de Atención', value: '<2m' }
     ],
     capabilities: [
-      'Representación técnica directa ante autoridades municipales y secretarías de gobierno.',
-      'Evaluación de carga máxima, planes de contingencia médica y brigadas contra incendios.',
-      'Monitoreo analítico de multitudes en tiempo real para predecir aglomeraciones críticas.'
+      'Personal médico entrenado en soporte vital básico y avanzado (BLS/ACLS).',
+      'Articulación inmediata con red hospitalaria pública y privada.',
+      'Disposición de ambulancias medicalizadas y básicas según aforo.'
+    ]
+  },
+  {
+    id: 'valet-parking',
+    title: 'Valet Parking',
+    tag: 'Logística Vehicular',
+    description: 'Recepción, custodia y entrega segura de vehículos con conductores profesionales y protocolos de resguardo continuo.',
+    longDescription: 'Optimizamos la experiencia de llegada y salida de sus clientes mediante un servicio de Valet Parking premium. Maximizamos el uso de espacios de parqueo y garantizamos la integridad absoluta de cada automóvil.',
+    iconName: 'Car',
+    features: ['Conductores Certificados', 'Control de Inventario Digital', 'Póliza de Responsabilidad', 'Recepción VIP'],
+    metrics: [
+      { label: 'Vehículos Gestionados', value: '15k+' },
+      { label: 'Índice de Siniestralidad', value: '0%' }
+    ],
+    capabilities: [
+      'Conductores con pruebas rigurosas de confiabilidad y manejo defensivo.',
+      'Sistema de tickets digitales y solicitud de vehículo vía plataforma.',
+      'Logística de llaves y custodia perimetral en parqueaderos satélite.'
     ]
   }
 ];
@@ -67,7 +66,7 @@ export const PORTFOLIO_DATA: ProjectCase[] = [
   {
     id: 'cumbre-iberoamericana',
     title: 'Cumbre Iberoamericana',
-    type: 'Corporativo',
+    type: 'Seguridad',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDXq9cQu1WgPTcFC17TSR0ZAp5zyblqbC2lHRAEW1KG6Z-r9MPCMnZXMFnWuhYnCILdAT8cRMiWIIbd1ZVbb5iv6S1AfLcsBZ6GhCLcM9pWET7bIOLYT4As2EwDxZV0dP3wYUa_5UAmjyNKk_zpbtavccpvo3Y-H-qWR1J3-XPeThRwGkuPPXfPoUqqrOpX0wVdXk_VWNkwzCv5w_sWIlqHuGqa_ONk7GyybRzSU0PKqMYExBSfaTJQueDQo0vEL5eQUj-i5Tg5S2o',
     description: 'Despliegue operativo y protocolo blindado para la comitiva de Jefes de Estado. Coordinamos un perímetro seguro de 3 niveles con tecnología de monitoreo térmico.',
     location: 'Centro de Convenciones, Bogotá D.C.',
@@ -81,7 +80,7 @@ export const PORTFOLIO_DATA: ProjectCase[] = [
   {
     id: 'festival-logistico-vehicular',
     title: 'Despliegue Logístico Vehicular 24/7',
-    type: 'Logística',
+    type: 'Valet Parking',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB7U3zb6rq6WV5YIZCXydfkoRVcwxCGJYi5LbZr5FF8a-Vv3uY0IKAchEAgm_QdAbr_QU4Oae1YBW2h7yQOev-BA9WEdscWbXMzMxkzOLdidkT5wzi6_5TNbcsiswQi1Mp2GExDzPYEp9c9GK4W-VROExRQzHVsYt-GpxrLPEwoZexlQ3GXlXc9-emG1p1y92mG2J_NbcojK0zPl3XtN8Mn_U-s6RYfWx2lYsqOZY8Q0o2Xq6-WhnEUXtrYQ5ux7H8EtGjhJcJx2QU',
     description: 'Administración inteligente de la flota de transporte pesado y custodia satelital ininterrumpida para el traslado de montajes de escala masiva.',
     location: 'Rutas de Cobertura Nacional',
@@ -95,7 +94,7 @@ export const PORTFOLIO_DATA: ProjectCase[] = [
   {
     id: 'gran-gala-internacional',
     title: 'Gala Internacional de Espectáculos',
-    type: 'Entretenimiento',
+    type: 'Primeros Auxilios',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCdaf1WoOhP-axdzZMpZPfNc867VAsMd3DiFKIqC8iv0btYVhDOCrCa97cvjLI2rSgNOMfJBashZbbVH_vJjoMjSekTmwtNX0SZJODqUjfbxfiwsxYTS0IkcachmBOI-6x2gS4Q9_hfLzaxKDTV_REhK7QuvLRZxtIDwLM2mS88XxRHv1iCq735936fpX1PBcr2x2ufyqczI6rOx55F0onc2SFhqKDTah_pfC4o_HiMPPm0jSmGMf7tmw06w63GotoOrVAW6j5Ub6A',
     description: 'Control de más de 45,000 espectadores simultáneos en escenario de alta concurrencia. Gestión de flujos de egreso y prevención de estampidas mediante simuladores virtuales.',
     location: 'Estadio Metropolitano',
@@ -109,7 +108,7 @@ export const PORTFOLIO_DATA: ProjectCase[] = [
   {
     id: 'centro-mando-operativo',
     title: 'Centro de Mando Operativo Integrado',
-    type: 'Monitoreo / VIP',
+    type: 'Seguridad',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuANy84TD9ozkRhyu7DLkyZecTRllHLib-Ux0CcJVgU-3bZ54ME0g7m9SoigryuO1TFyhb21GFRvBu9y76PpvtkEMSejNe3CqKMZ7QiClFrsXnTk7wh1MoNm7vg9h5vMz-8LURJlE_2d3QKtGQtzQF3sEd3yFtSDrlzzAo-Fj1MtnNDiJrCWW6opWGvNigSrupRA9G7lsJQZkGaH3BZALdltfvi4CXVqjTrHLPynTn4yZmVgP2dN6sFLxYw6TMUtBsylJzjAnPhwVxk',
     description: 'Monitoreo de redes críticas de telecomunicaciones tácticas de nivel militar. Enlace satelital redundante coordinado directamente con el Pentágono de Seguridad de B&R.',
     location: 'Sede Principal, Bogotá',

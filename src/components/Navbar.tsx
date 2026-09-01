@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, ArrowUpRight, ShieldAlert, PhoneCall } from 'lucide-react';
 import { LOGO_IMAGE } from '../data';
+import { TEXTS } from '../constants';
 
 interface NavbarProps {
   onQuoteTrigger: () => void;
@@ -22,7 +23,7 @@ export default function Navbar({ onQuoteTrigger, onRequestPortalTrigger }: Navba
       }
 
       // Simple active section detection
-      const sections = ['hero', 'about', 'services', 'gallery', 'contact', 'client-portal'];
+      const sections = ['hero', 'about', 'services', 'gallery', 'locations', 'contact'];
       const scrollPosition = window.scrollY + 120;
 
       for (const section of sections) {
@@ -82,10 +83,10 @@ export default function Navbar({ onQuoteTrigger, onRequestPortalTrigger }: Navba
             </div>
             <div className="flex flex-col select-none">
               <span className="font-display font-black text-lg md:text-xl text-white uppercase tracking-tight leading-none group-hover:text-brand-primary transition-colors">
-                BLACK & RED
+                {TEXTS.navbar.brandName}
               </span>
               <span className="font-mono text-[9px] text-brand-primary tracking-[0.25em] uppercase font-bold leading-none mt-1">
-                LOGISTIC GROUP
+                {TEXTS.navbar.brandSubtitle}
               </span>
             </div>
           </a>
@@ -120,13 +121,13 @@ export default function Navbar({ onQuoteTrigger, onRequestPortalTrigger }: Navba
               Casos de Éxito
             </a>
             <a
-              onClick={(e) => handleLinkClick(e, 'client-portal')}
-              href="#client-portal"
+              onClick={(e) => handleLinkClick(e, 'locations')}
+              href="#locations"
               className={`font-sans text-xs uppercase tracking-widest font-bold transition-all hover:text-white ${
-                activeSection === 'client-portal' ? 'text-brand-primary border-b-2 border-brand-red pb-1' : 'text-brand-variant/80'
+                activeSection === 'locations' ? 'text-brand-primary border-b-2 border-brand-red pb-1' : 'text-brand-variant/80'
               }`}
             >
-              Mando Táctico
+              {TEXTS.navbar.links.clientPortal}
             </a>
             <a
               onClick={(e) => handleLinkClick(e, 'contact')}
@@ -145,7 +146,7 @@ export default function Navbar({ onQuoteTrigger, onRequestPortalTrigger }: Navba
               className="relative group overflow-hidden bg-brand-red text-white font-sans text-xs uppercase font-extrabold px-6 py-3 tracking-widest transition-all hover:bg-white hover:text-brand-red active:scale-95 shadow-md shadow-brand-red/10"
             >
               <span className="relative z-10 flex items-center gap-1.5">
-                Cotizar <ArrowUpRight className="h-3.5 w-3.5" />
+                {TEXTS.navbar.quoteBtn} <ArrowUpRight className="h-3.5 w-3.5" />
               </span>
               <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
             </button>
@@ -156,7 +157,7 @@ export default function Navbar({ onQuoteTrigger, onRequestPortalTrigger }: Navba
             <a
               href="tel:018000"
               className="flex items-center justify-center h-10 w-10 bg-brand-container border border-brand-outline-variant/30 text-brand-red hover:bg-brand-red hover:text-white transition-colors"
-              title="Línea de Emergencia 24/7"
+              title={TEXTS.navbar.emergencyPhoneTitle}
             >
               <PhoneCall className="h-4 w-4 animate-pulse" />
             </a>
@@ -212,14 +213,14 @@ export default function Navbar({ onQuoteTrigger, onRequestPortalTrigger }: Navba
                 <span className="text-xs text-brand-outline">CASOS OPERATIVOS</span>
               </a>
               <a
-                onClick={(e) => handleLinkClick(e, 'client-portal')}
-                href="#client-portal"
+                onClick={(e) => handleLinkClick(e, 'locations')}
+                href="#locations"
                 className={`text-sm uppercase tracking-wider font-bold py-2 border-b border-brand-outline-variant/20 flex justify-between items-center ${
-                  activeSection === 'client-portal' ? 'text-brand-primary' : 'text-brand-onsurface/80'
+                  activeSection === 'locations' ? 'text-brand-primary' : 'text-brand-onsurface/80'
                 }`}
               >
-                <span>Mando Táctico</span>
-                <span className="text-xs text-brand-outline">PORTAL DE SOLICITUDES</span>
+                <span>{TEXTS.navbar.links.clientPortal}</span>
+                <span className="text-xs text-brand-outline">UBICACIONES</span>
               </a>
               <a
                 onClick={(e) => handleLinkClick(e, 'contact')}
@@ -241,7 +242,7 @@ export default function Navbar({ onQuoteTrigger, onRequestPortalTrigger }: Navba
                 }}
                 className="w-full bg-brand-red text-white py-4 px-4 font-sans text-xs uppercase font-extrabold tracking-widest text-center"
               >
-                COTIZAR AHORA
+                {TEXTS.navbar.mobileQuoteBtn}
               </button>
               <button
                 onClick={() => {
@@ -250,16 +251,16 @@ export default function Navbar({ onQuoteTrigger, onRequestPortalTrigger }: Navba
                 }}
                 className="w-full border border-brand-outline/40 text-brand-primary hover:border-white py-4 px-4 font-sans text-xs uppercase font-extrabold tracking-widest text-center"
               >
-                MANDO MÓVIL
+                {TEXTS.navbar.mobilePortalBtn}
               </button>
             </div>
 
             <div className="flex justify-between items-center bg-brand-container p-4 border-l-2 border-brand-red mt-2">
               <div className="flex items-center gap-1.5 text-brand-primary text-xs font-mono">
                 <ShieldAlert className="h-3.5 w-3.5 text-brand-red animate-pulse" />
-                <span>ALERTA DE DESPLIEGUE</span>
+                <span>{TEXTS.navbar.mobileAlert}</span>
               </div>
-              <span className="text-xs text-white font-bold leading-none">01-800-RED-LOGIC</span>
+              <span className="text-xs text-white font-bold leading-none">{TEXTS.navbar.emergencyPhone}</span>
             </div>
           </motion.div>
         )}

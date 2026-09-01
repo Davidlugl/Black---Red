@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Phone, Mail, Send, CheckCircle, ShieldAlert, Sparkles } from 'lucide-react';
 import { ContactLead } from '../types';
+import { TEXTS } from '../constants';
 
 interface ContactFormProps {
   preFilledDetails: string;
@@ -94,7 +95,7 @@ export default function ContactForm({ preFilledDetails, preFilledSpecialty, onAd
           <div className="space-y-6">
             {/* Phone Card */}
             <a
-              href="tel:+576014567890"
+              href={`tel:+57${TEXTS.footer.emergencyPhone.replace(/\s+/g, '')}`}
               className="flex items-center gap-6 p-6 bg-brand-container border-l-4 border-brand-red hover:bg-brand-highest transition-all duration-300 group block"
             >
               <div className="p-3.5 bg-brand-low text-brand-primary group-hover:bg-brand-red group-hover:text-white transition-colors">
@@ -105,25 +106,25 @@ export default function ContactForm({ preFilledDetails, preFilledSpecialty, onAd
                   Central de Atención Directa
                 </p>
                 <p className="font-display font-black text-lg sm:text-xl text-white tracking-wide group-hover:text-brand-primary transition-colors">
-                  +57 (601) 456-7890
+                  {TEXTS.footer.emergencyPhone}
                 </p>
               </div>
             </a>
 
             {/* Email Card */}
             <a
-              href="mailto:comercial@blackandred.co"
+              href={`mailto:${TEXTS.footer.email}`}
               className="flex items-center gap-6 p-6 bg-brand-container border-l-4 border-brand-red hover:bg-brand-highest transition-all duration-300 group block"
             >
-              <div className="p-3.5 bg-brand-low text-brand-primary group-hover:bg-brand-red group-hover:text-white transition-colors">
+              <div className="p-3.5 bg-brand-low text-brand-primary group-hover:bg-brand-red group-hover:text-white transition-colors shrink-0">
                 <Mail className="h-6 w-6 group-hover:scale-110 transition-transform" />
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="font-mono text-[9px] uppercase text-brand-primary tracking-wider font-extrabold mb-1">
                   Consultas Comerciales & Dossier
                 </p>
-                <p className="font-display font-black text-lg sm:text-xl text-white tracking-wide group-hover:text-brand-primary transition-colors truncate max-w-xs sm:max-w-none">
-                  comercial@blackandred.co
+                <p className="font-display font-black text-base sm:text-lg text-white tracking-wide group-hover:text-brand-primary transition-colors truncate">
+                  {TEXTS.footer.email}
                 </p>
               </div>
             </a>

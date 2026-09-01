@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowRight, MessageSquare, ShieldCheck, Siren } from 'lucide-react';
 import { HERO_BG_IMAGE } from '../data';
+import { TEXTS } from '../constants';
 
 interface HeroProps {
   onExploreServices: () => void;
@@ -34,7 +35,7 @@ export default function Hero({ onExploreServices, onTalkToExpert }: HeroProps) {
             >
               <span className="w-10 h-0.5 bg-brand-red inline-block"></span>
               <span className="font-mono text-xs uppercase tracking-[0.45em] text-brand-primary font-bold">
-                LÍDERES EN SEGURIDAD INTEGRAL Y LOGÍSTICA TÁCTICA
+                {TEXTS.hero.subtitle}
               </span>
             </motion.div>
 
@@ -44,12 +45,12 @@ export default function Hero({ onExploreServices, onTalkToExpert }: HeroProps) {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-white uppercase tracking-tight"
             >
-              ORQUESTAMOS <br className="hidden sm:inline" />
+              {TEXTS.hero.titleLine1} <br className="hidden sm:inline" />
               <span className="text-brand-red italic font-extrabold relative inline-block">
-                SEGURIDAD
+                {TEXTS.hero.titleHighlight}
                 <span className="absolute left-0 bottom-1 w-full h-[3px] bg-brand-red/30"></span>
               </span>{' '}
-              DE ALTO IMPACTO
+              {TEXTS.hero.titleLine2}
             </motion.h1>
 
             <motion.p
@@ -58,7 +59,7 @@ export default function Hero({ onExploreServices, onTalkToExpert }: HeroProps) {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="font-sans text-brand-variant text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed font-light"
             >
-              Elevamos el estándar de protección y logística táctica para comitivas de gobierno, eventos corporativos de gran escala, espectáculos masivos y servicios VIP con precisión militar y tecnología integrada.
+              {TEXTS.hero.description}
             </motion.p>
 
             {/* Core Buttons */}
@@ -72,7 +73,7 @@ export default function Hero({ onExploreServices, onTalkToExpert }: HeroProps) {
                 onClick={onExploreServices}
                 className="group relative bg-brand-red text-white py-5 px-10 font-sans text-xs uppercase font-extrabold tracking-widest hover:bg-white hover:text-brand-red active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 shadow-xl shadow-brand-red/15"
               >
-                <span>Nuestros Servicios</span>
+                <span>{TEXTS.hero.primaryBtn}</span>
                 <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1.5 transition-transform" />
               </button>
 
@@ -81,7 +82,7 @@ export default function Hero({ onExploreServices, onTalkToExpert }: HeroProps) {
                 className="group border border-brand-outline/35 text-white bg-transparent py-5 px-10 font-sans text-xs uppercase font-extrabold tracking-widest hover:border-white hover:bg-brand-highest/30 active:scale-95 transition-all duration-300 flex items-center justify-center gap-3"
               >
                 <MessageSquare className="h-4 w-4 text-brand-primary" />
-                <span>Hablar con un Experto</span>
+                <span>{TEXTS.hero.secondaryBtn}</span>
               </button>
             </motion.div>
           </div>
@@ -97,25 +98,25 @@ export default function Hero({ onExploreServices, onTalkToExpert }: HeroProps) {
               <div className="flex items-center justify-between border-b border-brand-outline-variant/30 pb-3">
                 <span className="font-mono text-[10px] uppercase text-brand-primary tracking-widest flex items-center gap-1.5">
                   <Siren className="h-3 w-3 text-brand-red animate-pulse" />
-                  Estado del Despliegue
+                  {TEXTS.hero.statusBadge.title}
                 </span>
                 <span className="px-2 py-0.5 bg-brand-red/15 text-brand-primary text-[9px] font-mono font-bold tracking-wider rounded">
-                  EN EJECUCIÓN
+                  {TEXTS.hero.statusBadge.status}
                 </span>
               </div>
 
               <div>
                 <p className="font-display font-black text-sm uppercase text-white tracking-wide">
-                  GALA INTERNACIONAL
+                  {TEXTS.hero.statusBadge.eventName}
                 </p>
                 <p className="text-xs text-brand-variant mt-1.5 leading-relaxed font-light">
-                  Logística integral de transporte blindado y resguardo de alta gama VIP activo desde las 08:00 COT.
+                  {TEXTS.hero.statusBadge.eventDesc}
                 </p>
               </div>
 
               <div className="pt-2 flex items-center gap-2 text-brand-primary font-mono text-[10px] tracking-wide">
                 <ShieldCheck className="h-3.5 w-3.5 text-green-500" />
-                <span>99.98% de Eficacia Operativa</span>
+                <span>{TEXTS.hero.statusBadge.efficiency}</span>
               </div>
             </motion.div>
           </div>

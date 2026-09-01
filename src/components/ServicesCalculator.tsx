@@ -116,7 +116,7 @@ export default function ServicesCalculator({ onPreFillRequest }: ServicesCalcula
             SERVICIOS DE CLASE MUNDIAL
           </motion.span>
           <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl uppercase text-white tracking-tight">
-            Nuestros Pilares de Despliegue
+            Nuestros Servicios
           </h2>
           <div className="w-16 h-1 bg-brand-red mx-auto"></div>
           <p className="text-brand-variant text-base sm:text-lg font-light leading-relaxed">
