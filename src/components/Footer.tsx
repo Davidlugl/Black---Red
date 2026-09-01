@@ -85,29 +85,11 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#about"
-                  onClick={(e) => handleScrollToSection(e, 'about')}
-                  className="text-xs text-brand-variant hover:text-brand-primary uppercase font-bold tracking-wider transition-colors"
-                >
-                  Sostenibilidad
-                </a>
-              </li>
-              <li>
-                <a
                   href="#contact"
                   onClick={(e) => handleScrollToSection(e, 'contact')}
                   className="text-xs text-brand-variant hover:text-brand-primary uppercase font-bold tracking-wider transition-colors"
                 >
                   Trabaja con Nosotros
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#gallery"
-                  onClick={(e) => handleScrollToSection(e, 'gallery')}
-                  className="text-xs text-brand-variant hover:text-brand-primary uppercase font-bold tracking-wider transition-colors"
-                >
-                  Sala de Prensa
                 </a>
               </li>
             </ul>
@@ -125,7 +107,7 @@ export default function Footer() {
                   onClick={(e) => handleScrollToSection(e, 'services')}
                   className="text-xs text-brand-variant hover:text-brand-primary uppercase font-bold tracking-wider transition-colors"
                 >
-                  Seguridad VIP
+                  Seguridad
                 </a>
               </li>
               <li>
@@ -134,7 +116,7 @@ export default function Footer() {
                   onClick={(e) => handleScrollToSection(e, 'services')}
                   className="text-xs text-brand-variant hover:text-brand-primary uppercase font-bold tracking-wider transition-colors"
                 >
-                  Logística Eventos
+                  Primeros Auxilios
                 </a>
               </li>
               <li>
@@ -143,16 +125,7 @@ export default function Footer() {
                   onClick={(e) => handleScrollToSection(e, 'services')}
                   className="text-xs text-brand-variant hover:text-brand-primary uppercase font-bold tracking-wider transition-colors"
                 >
-                  Consultoría PMU
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  onClick={(e) => handleScrollToSection(e, 'services')}
-                  className="text-xs text-brand-variant hover:text-brand-primary uppercase font-bold tracking-wider transition-colors"
-                >
-                  Transporte Especial
+                  Valet Parking
                 </a>
               </li>
             </ul>
