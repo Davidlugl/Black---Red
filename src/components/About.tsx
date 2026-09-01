@@ -1,10 +1,7 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { ArrowRight, ShieldCheck, Clock, Award, History } from 'lucide-react';
-import { ABOUT_COMMAND_IMAGE, MILESTONES } from '../data';
+import { Award } from 'lucide-react';
+import { ABOUT_COMMAND_IMAGE } from '../data';
 
 export default function About() {
-  const [selectedMilestoneIndex, setSelectedMilestoneIndex] = useState(MILESTONES.length - 1);
 
   return (
     <section id="about" className="py-24 md:py-32 bg-brand-lowest relative overflow-hidden">
@@ -63,84 +60,40 @@ export default function About() {
               No somos una agencia de seguridad convencional; somos el pilar logístico y de asalto operativo que sostiene las experiencias más exigentes del país. Nuestra metodología integra inteligencia preventiva, tecnología de monitoreo encriptado y un cuerpo táctico de élite.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div className="p-6 bg-brand-container border-b-2 border-brand-outline-variant/40 hover:border-brand-red transition-all duration-300 group">
-                <span className="font-display font-black text-[32px] sm:text-4xl text-brand-primary block group-hover:text-white transition-colors duration-300">
-                  2.5k
-                </span>
-                <span className="font-mono text-[10px] uppercase text-white font-extrabold tracking-widest mt-2 block">
-                  Operaciones Exitosas
-                </span>
-                <p className="text-xs text-brand-variant mt-1.5 font-light">
-                  Servicios de despliegue vip y control de aforo masivo sin incidentes registrados.
+            {/* Misión, Visión y Valores */}
+            <div className="space-y-6 pt-4">
+              <div className="bg-brand-container border-l-4 border-brand-red p-6 hover:bg-brand-highest transition-colors duration-300">
+                <h3 className="font-display font-black text-xl text-white uppercase tracking-wider mb-2">Misión</h3>
+                <p className="text-sm text-brand-variant font-light leading-relaxed">
+                  Proveer soluciones logísticas, de seguridad integral y atención prehospitalaria de élite, garantizando la tranquilidad y el éxito de cada operación a través de un cuerpo táctico altamente capacitado y tecnología de vanguardia.
                 </p>
               </div>
 
-              <div className="p-6 bg-brand-container border-b-2 border-brand-outline-variant/40 hover:border-brand-red transition-all duration-300 group">
-                <span className="font-display font-black text-[32px] sm:text-4xl text-brand-primary block group-hover:text-white transition-colors duration-300">
-                  100%
-                </span>
-                <span className="font-mono text-[10px] uppercase text-white font-extrabold tracking-widest mt-2 block">
-                  Confiabilidad Legal
-                </span>
-                <p className="text-xs text-brand-variant mt-1.5 font-light">
-                  Cumplimiento absoluto de las normativas de PMU municipales y seguros internacionales.
+              <div className="bg-brand-container border-l-4 border-brand-primary p-6 hover:bg-brand-highest transition-colors duration-300">
+                <h3 className="font-display font-black text-xl text-white uppercase tracking-wider mb-2">Visión</h3>
+                <p className="text-sm text-brand-variant font-light leading-relaxed">
+                  Consolidarnos como el referente definitivo a nivel nacional en gestión táctica, mitigación de riesgos y despliegue logístico para eventos masivos y corporativos, elevando continuamente el estándar de excelencia en la industria.
                 </p>
               </div>
-            </div>
 
-            {/* Milestone Interactive Slider with Scrubber */}
-            <div className="bg-brand-container/50 border border-brand-outline-variant/30 p-6 space-y-6">
-              <div className="flex items-center justify-between border-b border-brand-outline-variant/20 pb-3">
-                <span className="font-mono text-[10px] uppercase text-brand-primary tracking-widest flex items-center gap-1.5">
-                  <History className="h-3.5 w-3.5 text-brand-red animate-pulse" />
-                  Nuestra Trayectoria
-                </span>
-                <span className="text-xs text-brand-variant">Selecciona un hito temporal</span>
-              </div>
-
-              {/* Scrubber Navigation Buttons */}
-              <div className="relative flex justify-between items-center gap-2 max-w-md mx-auto pt-2">
-                <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-brand-outline-variant/30 -translate-y-1/2 -z-10"></div>
-                {MILESTONES.map((item, idx) => (
-                  <button
-                    key={item.year}
-                    onClick={() => setSelectedMilestoneIndex(idx)}
-                    className={`relative z-10 w-11 h-11 rounded-none border font-mono text-xs font-bold flex items-center justify-center transition-all ${
-                      selectedMilestoneIndex === idx
-                        ? 'bg-brand-red text-white border-brand-red scale-110 shadow-lg shadow-brand-red/10'
-                        : 'bg-brand-low text-brand-variant border-brand-outline-variant/50 hover:border-brand-primary'
-                    }`}
-                  >
-                    {item.year}
-                  </button>
-                ))}
-              </div>
-
-              {/* Hito Info Animada */}
-              <div className="min-h-[110px] bg-brand-low/50 p-4 border border-brand-outline-variant/20">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={selectedMilestoneIndex}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.25 }}
-                    className="space-y-2"
-                  >
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5">
-                      <h4 className="font-display font-bold text-sm text-white uppercase tracking-wider">
-                        {MILESTONES[selectedMilestoneIndex].title}
-                      </h4>
-                      <span className="px-2.5 py-0.5 bg-brand-container border border-brand-outline-variant/40 rounded-sm font-mono text-[10px] text-brand-primary font-bold self-start">
-                        {MILESTONES[selectedMilestoneIndex].metric}
-                      </span>
+              <div className="bg-brand-container border border-brand-outline-variant/30 p-6 hover:border-brand-red/50 transition-colors duration-300">
+                <h3 className="font-display font-black text-xl text-white uppercase tracking-wider mb-4 flex items-center gap-2">
+                  <Award className="h-5 w-5 text-brand-red" />
+                  Nuestros Valores
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    'Excelencia Operativa',
+                    'Integridad y Confidencialidad',
+                    'Innovación Táctica',
+                    'Reacción Inmediata'
+                  ].map((valor, idx) => (
+                    <div key={idx} className="flex items-center gap-2 font-mono text-[10px] sm:text-xs text-brand-primary uppercase font-bold tracking-wide">
+                      <span className="w-1.5 h-1.5 bg-brand-red shrink-0" />
+                      <span>{valor}</span>
                     </div>
-                    <p className="text-xs sm:text-sm text-brand-variant leading-relaxed font-light">
-                      {MILESTONES[selectedMilestoneIndex].description}
-                    </p>
-                  </motion.div>
-                </AnimatePresence>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

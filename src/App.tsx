@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import ServicesCalculator from './components/ServicesCalculator';
-import PortfolioGallery from './components/PortfolioGallery';
+
 import ContactForm from './components/ContactForm';
 import LocationsMap from './components/LocationsMap';
 import Footer from './components/Footer';
@@ -169,7 +169,7 @@ export default function App() {
 
       {/* Main sticky navigation */}
       <Navbar 
-        onQuoteTrigger={() => scrollTo('services')} 
+        onQuoteTrigger={() => scrollTo('contact')} 
         onRequestPortalTrigger={() => scrollTo('locations')} 
       />
 
@@ -188,8 +188,7 @@ export default function App() {
         {/* Core services & Dynamic Resource Estimates Calculator */}
         <ServicesCalculator onPreFillRequest={handlePreFillRequest} />
 
-        {/* Active Cases Portfolio filterable Gallery */}
-        <PortfolioGallery />
+
 
         {/* Locations and Gastro bars Map */}
         <LocationsMap />

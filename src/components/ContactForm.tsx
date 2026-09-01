@@ -267,8 +267,8 @@ function FormFields({
         </div>
       </div>
 
-      {/* Phone and specialty selection */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+      {/* Phone */}
+      <div className="grid grid-cols-1 gap-6 sm:gap-8">
         <div className="space-y-2">
           <label className="font-mono text-[10px] uppercase text-brand-variant font-extrabold tracking-widest block">
             Teléfono de Contacto
@@ -281,21 +281,6 @@ function FormFields({
             placeholder="+57 300 000 0000"
             className="w-full bg-brand-low border-0 border-b-2 border-brand-outline-variant/60 focus:border-brand-red text-white py-3.5 px-3 focus:outline-none focus:ring-0 text-sm font-light transition-all placeholder:text-brand-variant/20"
           />
-        </div>
-        <div className="space-y-2">
-          <label className="font-mono text-[10px] uppercase text-brand-variant font-extrabold tracking-widest block">
-            Especialidad Requerida
-          </label>
-          <select
-            value={specialty}
-            onChange={(e) => setSpecialty(e.target.value)}
-            className="w-full bg-brand-low border-0 border-b-2 border-brand-outline-variant/60 focus:border-brand-red text-white py-3.5 px-3 focus:outline-none focus:ring-0 text-sm font-light transition-all"
-          >
-            <option value="Protección VIP">Protección VIP / Personalidades</option>
-            <option value="Logística Masiva">Logística de Eventos Masivos</option>
-            <option value="Eventos Corporativos">Eventos Corporativos de Gala</option>
-            <option value="Montaje BTL">Estructura & Montaje BTL</option>
-          </select>
         </div>
       </div>
 

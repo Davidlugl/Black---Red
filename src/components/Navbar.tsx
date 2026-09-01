@@ -23,7 +23,7 @@ export default function Navbar({ onQuoteTrigger, onRequestPortalTrigger }: Navba
       }
 
       // Simple active section detection
-      const sections = ['hero', 'about', 'services', 'gallery', 'locations', 'contact'];
+      const sections = ['hero', 'about', 'services', 'locations', 'contact'];
       const scrollPosition = window.scrollY + 120;
 
       for (const section of sections) {
@@ -111,15 +111,7 @@ export default function Navbar({ onQuoteTrigger, onRequestPortalTrigger }: Navba
             >
               Servicios
             </a>
-            <a
-              onClick={(e) => handleLinkClick(e, 'gallery')}
-              href="#gallery"
-              className={`font-sans text-xs uppercase tracking-widest font-bold transition-all hover:text-white ${
-                activeSection === 'gallery' ? 'text-brand-primary border-b-2 border-brand-red pb-1' : 'text-brand-variant/80'
-              }`}
-            >
-              Casos de Éxito
-            </a>
+
             <a
               onClick={(e) => handleLinkClick(e, 'locations')}
               href="#locations"
@@ -202,16 +194,7 @@ export default function Navbar({ onQuoteTrigger, onRequestPortalTrigger }: Navba
                 <span>Servicios</span>
                 <span className="text-xs text-brand-outline">NUESTROS SERVICIOS</span>
               </a>
-              <a
-                onClick={(e) => handleLinkClick(e, 'gallery')}
-                href="#gallery"
-                className={`text-sm uppercase tracking-wider font-bold py-2 border-b border-brand-outline-variant/20 flex justify-between items-center ${
-                  activeSection === 'gallery' ? 'text-brand-primary' : 'text-brand-onsurface/80'
-                }`}
-              >
-                <span>Casos de Éxito</span>
-                <span className="text-xs text-brand-outline">CASOS OPERATIVOS</span>
-              </a>
+
               <a
                 onClick={(e) => handleLinkClick(e, 'locations')}
                 href="#locations"
